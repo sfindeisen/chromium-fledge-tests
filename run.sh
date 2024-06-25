@@ -145,6 +145,7 @@ fi
 
 docker run --rm -i \
   ${termOpt} \
+  -v "${HERE}/tests-log:/home/usertd/tests-log/" \
   -v "${CHROMIUM_DIR}:/home/usertd/chromium/" \
   -e CHROMIUM_DIR=/home/usertd/chromium \
   -e PROFILE_DIR=/home/usertd/profile \
