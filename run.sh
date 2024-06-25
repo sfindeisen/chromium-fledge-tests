@@ -143,6 +143,9 @@ if [[ -v TEST_DIR ]] && [[ -n "${TEST_DIR}" ]]; then
   ls -laR ${TEST_DIR}
 fi
 
+mkdir -p "${HERE}/tests-log"
+chmod g+r+w+x,o+r+w+x "${HERE}/tests-log"
+
 docker run --rm -i \
   ${termOpt} \
   -v "${HERE}/tests-log:/home/usertd/tests-log/" \
